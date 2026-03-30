@@ -1,0 +1,30 @@
+{
+  "name": "excaliagent",
+  "version": "0.1.0",
+  "description": "CLI for AI agents to read and edit Obsidian Excalidraw .md drawings",
+  "type": "module",
+  "bin": {
+    "excaliagent": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "node --import tsx src/cli.ts",
+    "test": "vitest run",
+    "build:diagram": "tsx scripts/build-attention-diagram.mts",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "lz-string": "^1.5.0",
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "license": "MIT"
+}
